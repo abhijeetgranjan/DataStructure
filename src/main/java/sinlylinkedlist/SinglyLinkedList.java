@@ -33,6 +33,7 @@ public class SinglyLinkedList {
     }
 
     public void printLinkedList() {
+        System.out.println(" *** Printing linked list ***");
         if (getSize() == 0) {
             System.out.println("the list is empty");
         } else {
@@ -44,7 +45,33 @@ public class SinglyLinkedList {
 
             }
         }
+        System.out.println(" ");
+        System.out.println("*** Printed the list ***");
+    }
 
+    public void getIndex(int value) {
+
+        if (getSize() == 0) {
+            System.out.println("element not present in list");
+        } else {
+            int index = 1;
+            curr = head;
+            if (curr.getValue() == value) {
+                System.out.println(" the index is " + index);
+
+            } else {
+                while (curr.getNext() != null) {
+                    if (curr.getValue() == value) {
+                        System.out.println(" the index is " + index);
+                        return;
+                    } else {
+                        curr = curr.getNext();
+                        index++;
+                    }
+                }
+                System.out.println(" element not present in list");
+            }
+        }
     }
 
     public int getSize() {
