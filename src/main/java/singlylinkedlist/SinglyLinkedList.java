@@ -1,4 +1,4 @@
-package main.java.sinlylinkedlist;
+package main.java.singlylinkedlist;
 
 public class SinglyLinkedList {
     private Node head, curr;
