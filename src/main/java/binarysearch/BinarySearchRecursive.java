@@ -22,7 +22,6 @@ public class BinarySearchRecursive {
     }
 
     private static int BinarySearch(int[] array, int start, int last, int noToBeSearched) {
-
         if (start < last) {
             int middle = (start + last) / 2;
 
