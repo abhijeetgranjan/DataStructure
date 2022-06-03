@@ -77,4 +77,18 @@ public class SinglyLinkedList {
     public int getSize() {
         return size;
     }
+
+    public void reverseLinkedList() {
+
+        curr = head;
+        Node prev = null;
+
+        while(curr!=null){
+            Node temp = curr.getNext();
+            curr.setNext(prev);
+            prev= curr;
+            curr= temp;
+        }
+        head= prev;
+    }
 }

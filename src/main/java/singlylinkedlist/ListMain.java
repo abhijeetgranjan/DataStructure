@@ -19,5 +19,9 @@ public class ListMain {
         singlyLinkedList.getIndex(55);
         singlyLinkedList.getIndex(22);
         singlyLinkedList.getIndex(6633);
+
+
+        singlyLinkedList.reverseLinkedList();
+        singlyLinkedList.printLinkedList();
     }
 }
