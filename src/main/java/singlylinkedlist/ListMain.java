@@ -15,6 +15,14 @@ public class ListMain {
 
         singlyLinkedList.printLinkedList();
 
+        singlyLinkedList.addAtIndex(66,1);
+        singlyLinkedList.printLinkedList();
+
+        singlyLinkedList.addAtIndex(100,7);
+        singlyLinkedList.printLinkedList();
+
+        singlyLinkedList.addAtIndex(111,4);
+        singlyLinkedList.printLinkedList();
 
         singlyLinkedList.getIndex(55);
         singlyLinkedList.getIndex(22);

@@ -80,6 +80,10 @@ public class SinglyLinkedList {
 
     public void reverseLinkedList() {
 
+        if(head==null){
+            return;
+        }
+
         curr = head;
         Node prev = null;
 
@@ -90,5 +94,29 @@ public class SinglyLinkedList {
             curr= temp;
         }
         head= prev;
+    }
+
+    public void addAtIndex(int value, int index){
+
+        if(index>getSize()+1){
+            return;
+        }
+        else if( index == 1){
+            addToFront(value);
+        }
+        else{
+            int count =0;
+            curr= head;
+            while(curr!=null){
+                count++;
+                if(count==index-1){
+                    Node node = new Node(value);
+                    node.setNext(curr.getNext());
+                    curr.setNext(node);
+                    return;
+                }
+                curr=curr.getNext();
+            }
+        }
     }
 }
