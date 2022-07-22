@@ -1,7 +1,7 @@
 package main.java.sorting;
 
 /*
-In insertion sort we first find the minimum element and insert it at first position and the element at first position
+In selection sort we first find the minimum element and insert it at first position and the element at first position
 takes it place, and then we do it for second element and so on.
 
 {8,3,9,7,5,4,-10}; --> {-10,3,9,7,5,4,8} --> {-10,3,4,7,5,9,8} -->{-10,3,4,5,7,9,8} -->{-10,3,4,5,7,9,8}
