@@ -4,6 +4,11 @@ package main.java.algorithms;
 Given an array Arr[] of N integers.
  Find the contiguous sub-array(containing at least one number) which has the maximum sum and return its sum.
  */
+
+/*
+Logic: add the consecutive integres and if the sum is greater than max sum , make the max sum = current sum 
+and if current sum < 0, make the current sum = 0
+ */
 public class KadaneAlgo {
     public static void main(String[] args) {
         int []arr = {-1,-2,-3,-4};
