@@ -1,5 +1,9 @@
 package main.java.algorithms;
-
+/*
+This alogortihm is used to find the element with the maximum occurences in an array. It is based on the approach that , initially we take the element at 
+zero position for majority element and if we encounter the same element we increase the counter else decrease the counter and if counter becomes zero, we take the
+next element as the majority element.
+*/
 public class MooreVotingAlgorithm {
     public static void main(String[] args) {
 
