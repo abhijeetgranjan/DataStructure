@@ -5,25 +5,25 @@ public class StackMain {
 
         StackImpl stack = new StackImpl(5);
 
-        stack.add(5);
-        stack.add(6);
-        stack.add(7);
-        stack.add(8);
-        stack.add(9);
-        stack.add(10);
+        stack.push(5);
+        stack.push(6);
+        stack.push(7);
+        stack.push(8);
+        stack.push(9);
+        stack.push(10);
         stack.printStack();
 
 
         System.out.println(" "+stack.peek());
 
 
-        System.out.println(" "+ stack.remove());
+        System.out.println(" "+ stack.pop());
 
         System.out.println();
         stack.printStack();
-        stack.remove();
-        stack.remove();
-        stack.remove();
+        stack.pop();
+        stack.pop();
+        stack.pop();
         System.out.println();
         stack.printStack();
 

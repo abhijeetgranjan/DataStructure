@@ -9,7 +9,7 @@ public class StackImpl {
         stack = new int[capacity];
     }
 
-    public void add(int value) {
+    public void push(int value) {
         if (getSize() == stack.length) {
             System.out.println(" stack is full reinitializing the stack");
             int [] newStack = new int[2 * stack.length];
@@ -21,7 +21,7 @@ public class StackImpl {
         stack[top++] = value;
     }
 
-    public int remove() {
+    public int pop() {
         System.out.println(" removing the element ");
         if (isEmpty()) {
             System.out.println(" stack is empty");
