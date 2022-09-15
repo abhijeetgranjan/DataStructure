@@ -5,19 +5,20 @@ import java.util.NoSuchElementException;
 public class QueueImpl {
 
     private int[] queue;
-    private int top;
+    private int back;
     private int front = 0;
 
-    QueueImpl(int capacity) {
+    public QueueImpl(int capacity) {
         queue = new int[capacity];
     }
 
     public void add(int value) {
-        if (top == queue.length) {
-            System.out.println("queue is full ");
-            return;
+        if (back == queue.length) {
+            int newQueue[]= new int[2* queue.length];
+            System.arraycopy(queue,0,newQueue,0, queue.length);
+            queue=newQueue;
         }
-        queue[top++] = value;
+        queue[back++] = value;
     }
 
     public int remove() {
@@ -29,18 +30,18 @@ public class QueueImpl {
         int removedElement = queue[front];
         front++;
         if(isEmpty()){
-            top=0;
+            back=0;
             front=0;
         }
         return removedElement;
     }
 
     public boolean isEmpty() {
-        return top - front == 0;
+        return back - front == 0;
     }
 
     public int getSize(){
-        return  top- front;
+        return  back- front;
     }
 
     public int peek() {
@@ -51,7 +52,7 @@ public class QueueImpl {
     }
 
     public void print() {
-        for (int i = front; i < top; i++) {
+        for (int i = front; i < back; i++) {
             System.out.print("| ");
             System.out.print(queue[i] + " |");
         }

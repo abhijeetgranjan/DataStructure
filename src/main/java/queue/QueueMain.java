@@ -20,14 +20,8 @@ public class QueueMain {
 
         queue.remove();
         queue.remove();
-        queue.remove();
-        queue.remove();
-        queue.remove();
-        queue.remove();
-        queue.remove();
-        queue.remove();
-        queue.remove();
-        queue.remove();
+
+
 
         //System.out.println(queue.peek());
         queue.add(11);
